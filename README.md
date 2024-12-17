@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Movie Search and Favourites App - Frontend  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend of the **Movie Search and Favourites App**, built using **React.js** and styled with **Bootstrap 5**. The app allows users to search for movies or TV shows using the OMDB API and save their favourites.  
 
-## Available Scripts
+## Features  
 
-In the project directory, you can run:
+1. **Search Page**:  
+   - Users can search for movies or TV shows using keywords.  
+   - Displays a list of results with the title, year, type, and poster image.  
+   - Includes a "Favourite" button to save movies/TV shows to the database.  
 
-### `npm start`
+2. **Favourites Page**:  
+   - Displays all the saved favourite movies/TV shows.  
+   - Data is fetched from the database.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used  
 
-### `npm test`
+- **React.js**: Framework for building the frontend.  
+- **Bootstrap 5**: For responsive UI styling.  
+- **Axios**: For making API calls to the OMDB API.  
+- **React Router**: For navigation between pages.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Getting Started  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Make sure you have the following installed:  
+- **Node.js** (v16 or higher)  
+- **npm** or **yarn**  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### Installation  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the Repository**:  
+   ```bash
+   git clone <repository-url>
+   cd frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2 Install Dependencies:
+  npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3 Set Up Environment Variables:
 
-## Learn More
+4 Create a .env file in the project root.
+  Add the following environment variables:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ REACT_APP_API_KEY=your_omdb_api_key
+ REACT_APP_BACKEND_URL=http://localhost:5100
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5 Run the Development Server:
 
-### Analyzing the Bundle Size
+ npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Open the app in your browser at http://localhost:3000.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+API Endpoints
+OMDB API
+Base URL: http://www.omdbapi.com
 
-### Advanced Configuration
+Search Movies/TV Shows:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Endpoint: /
+Method: GET
+Query Parameters:
+apikey: Your OMDB API key
+s: Search keyword
 
-### Deployment
+Backend API
+Save Favourite:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Endpoint: /movie
+Method: POST
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Get Favourites:
+Endpoint: /movie
+Method: GET
+
+Additional Notes
+Ensure the backend server is running to save and fetch favourites.
+OMDB API calls may be rate-limited for free accounts.
+
+Author
+Developed by Nikhil Mandia.
+
+
+This README provides all necessary information for setting up and running the frontend. Let me know if you need additional adjustments!
